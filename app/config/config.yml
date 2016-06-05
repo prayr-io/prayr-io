@@ -77,3 +77,4 @@ snc_redis:
             dsn: redis://redis/2
     session:
         client: session
+        ttl: 3600
