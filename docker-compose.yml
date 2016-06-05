@@ -1,0 +1,27 @@
+version: '2'
+services:
+  web:
+    image: prayr/nginx
+    volumes:
+      - .:/srv/app
+    ports:
+      - "80:80"
+    depends_on:
+      - php
+  php:
+    image: prayr/php-fpm
+    volumes:
+      - .:/srv/app
+    depends_on:
+      - mysql
+      - redis
+    environment:
+      SYMFONY_ENV: dev
+  mysql:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3306:3306"
+  redis:
+      image: redis:3
