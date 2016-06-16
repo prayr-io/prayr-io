@@ -78,3 +78,8 @@ snc_redis:
     session:
         client: session
         ttl: 3600
+
+fos_user:
+    db_driver: orm
+    firewall_name: main
+    user_class: AppBundle\Entity\User

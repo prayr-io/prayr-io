@@ -20,7 +20,10 @@ services:
   mysql:
     image: mysql:5.7
     environment:
-      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: prayr_dev
+      MYSQL_USER: prayr
+      MYSQL_PASSWORD: prayr
+      MYSQL_ROOT_PASSWORD: miau
     ports:
       - "3306:3306"
   redis:
