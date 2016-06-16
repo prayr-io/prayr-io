@@ -70,11 +70,11 @@ snc_redis:
         default:
             type: predis
             alias: default
-            dsn: redis://redis
+            dsn: redis://%redis_host%
         session:
             type: predis
             alias: session
-            dsn: redis://redis/2
+            dsn: redis://%redis_host%/2
     session:
         client: session
         ttl: 3600
