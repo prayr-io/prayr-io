@@ -1,0 +1,18 @@
+@import "variables.less";
+@import "mixins.less";
+
+body {
+  &.modal-open {
+    * {
+      visibility: hidden;
+    }
+
+    .modal {
+      visibility: visible;
+
+      * {
+        visibility: visible;
+      }
+    }
+  }
+}

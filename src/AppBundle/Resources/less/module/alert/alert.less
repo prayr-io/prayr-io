@@ -1,0 +1,32 @@
+@import "../../base/variables";
+@import "../../base/mixins";
+
+// mixins
+.alert-type-theme(@color) {
+  background: lighten(@color, 20%);
+  border-color: @color;
+}
+
+@media screen {
+  // module
+  .alert {
+    padding: 15px;
+    margin-bottom: 10px;
+
+    &.alert-warning {
+      .alert-type-theme(@color-warning);
+    }
+
+    &.alert-success {
+      .alert-type-theme(@color-success);
+    }
+
+    &.alert-danger {
+      .alert-type-theme(@color-danger);
+    }
+
+    &.alert-info {
+      .alert-type-theme(@color-info);
+    }
+  }
+}

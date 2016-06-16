@@ -28,7 +28,14 @@ framework:
         handler_id:  snc_redis.session.handler
     fragments:       ~
     http_method_override: true
-    assets: ~
+    assets:
+        version: 'v1'
+        version_format: '%%s?version=%%s'
+        packages:
+            js:
+                base_path: /js/
+            css:
+                base_path: /css
 
 # Twig Configuration
 twig:

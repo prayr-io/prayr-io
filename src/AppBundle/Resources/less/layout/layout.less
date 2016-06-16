@@ -1,0 +1,33 @@
+@import "../base/variables";
+@import "../base/mixins";
+
+@media screen {
+  .old-ie {
+    > * {
+      display: none;
+    }
+
+    > .browsehappy {
+      display: block;
+      width: 300px;
+      margin: 40px auto;
+      font-size: 14px;
+    }
+  }
+}
+
+@media only screen and (min-width: @screen-sm-min) {
+  @import "layout-sm";
+}
+
+@media only screen and (min-width: @screen-md-min) {
+  @import "layout-md";
+}
+
+@media only screen and (min-width: @screen-lg-min) {
+  @import "layout-lg";
+}
+
+@media print {
+  @import "layout-print";
+}
