@@ -17,6 +17,11 @@ services:
       - redis
     environment:
       SYMFONY_ENV: dev
+      SYMFONY_DATABASE_HOST: mysql
+      SYMFONY_DATABASE_NAME: prayr_dev
+      SYMFONY_DATABASE_USER: prayr
+      SYMFONY_DATABASE_PASSWORD: prayr
+
   mysql:
     image: mysql:5.7
     environment:
