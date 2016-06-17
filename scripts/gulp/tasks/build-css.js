@@ -46,6 +46,7 @@ gulp.task('build-css', function (cb) {
 gulp.task('build-css-app', function (cb) {
     buildCssFile(
         [
+            'node_modules/font-awesome/css/font-awesome.css',
             'src/AppBundle/Resources/less/module/**/!(*-xs|*-hs|*-sm|*-md|*-lg|*-xl).less'
         ],
         'app.css',
