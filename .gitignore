@@ -15,4 +15,8 @@
 /app/Resources/assets/*
 /vendor/
 /web/bundles/
+/web/css/
+/web/fonts/
+/web/js/
+/node_modules/
 .idea/
