@@ -28,7 +28,7 @@ framework:
         handler_id:  snc_redis.session.handler
     fragments:       ~
     http_method_override: true
-    assets: ~
+    assets:          ~
 
 # Twig Configuration
 twig:
@@ -70,11 +70,11 @@ snc_redis:
         default:
             type: predis
             alias: default
-            dsn: redis://redis
+            dsn: redis://%redis_host%
         session:
             type: predis
             alias: session
-            dsn: redis://redis/2
+            dsn: redis://%redis_host%/2
     session:
         client: session
         ttl: 3600
