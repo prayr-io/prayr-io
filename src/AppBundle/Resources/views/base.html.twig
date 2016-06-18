@@ -3,14 +3,21 @@
 <head>
     <meta charset="UTF-8" />
     <title>{% block title %}Welcome!{% endblock %}</title>
-    {% block stylesheets %}{% endblock %}
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css'|asset_version) }}" />
-    <script src="{{ asset('js/app-main-top.js'|asset_version) }}" type="text/javascript"></script>
+    {% block stylesheets %}
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css'|asset_version) }}" />
+    {% endblock %}
+    {% block top_javascripts %}
+        <script src="{{ asset('js/app-main-top.js'|asset_version) }}" type="text/javascript"></script>
+    {% endblock %}
 </head>
     <body>
+        <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
         {% block body %}{% endblock %}
-        {% block javascripts %}
+        {% block bottom_javascripts %}
             <script src="{{ asset('js/app-main-bottom.js'|asset_version) }}" type="text/javascript"></script>
         {% endblock %}
     </body>
