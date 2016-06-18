@@ -17,10 +17,18 @@ services:
       - redis
     environment:
       SYMFONY_ENV: dev
+      SYMFONY_DATABASE_HOST: mysql
+      SYMFONY_DATABASE_NAME: prayr_dev
+      SYMFONY_DATABASE_USER: prayr
+      SYMFONY_DATABASE_PASSWORD: prayr
+
   mysql:
     image: mysql:5.7
     environment:
-      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: prayr_dev
+      MYSQL_USER: prayr
+      MYSQL_PASSWORD: prayr
+      MYSQL_ROOT_PASSWORD: miau
     ports:
       - "3306:3306"
   redis:
