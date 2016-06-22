@@ -67,6 +67,12 @@ gulp.task('build-js-app-main-top', function (cb) {
 gulp.task('build-js-app-main-bottom', function (cb) {
     buildJsFile(
         [
+            'node_modules/jquery/dist/jquery.js',
+            'node_modules/bootstrap/dist/js/bootstrap.js',
+            'node_modules/agency/js/classie.js',
+            'node_modules/agency/js/cbpAnimatedHeader.js',
+            'node_modules/agency/js/jqBootstrapValidation.js',
+            'node_modules/agency/js/agency.js',
             'src/AppBundle/Resources/public/js/main.js',
             'src/AppBundle/Resources/public/js/module/**/*.js'
         ],

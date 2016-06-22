@@ -4,6 +4,7 @@
   "description": "prayr.io",
   "main": "gulpfile.js",
   "dependencies": {
+    "bootstrap": "~3.3.6",
     "del": "~2.2.0",
     "gulp": "~3.9.0",
     "gulp-concat": "~2.6.0",
@@ -30,7 +31,9 @@
     "node-waves": "0.7.2",
     "picturefill": "~2.2.0",
     "require-dir": "~0.3.0",
-    "font-awesome": "~4.6.3"
+    "font-awesome": "~4.6.3",
+    "jquery": "2.2.4",
+    "agency": "https://github.com/BlackrockDigital/startbootstrap-agency.git#gh-pages"
   },
   "devDependencies": {},
   "scripts": {
