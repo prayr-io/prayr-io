@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "f9baa98d51d01f9f64ce78c20b378fef",
-    "content-hash": "e63f269635a66cb1162f56a4912fa58a",
+    "hash": "9d89ad5a83a722502eb97b17d6c9d9ee",
+    "content-hash": "7d711c0a010e55109402a8ae881d613a",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -906,6 +906,60 @@
             "time": "2016-01-05 21:34:58"
         },
         {
+            "name": "elasticsearch/elasticsearch",
+            "version": "v2.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/elastic/elasticsearch-php.git",
+                "reference": "11ebdf2c847d0e2c4a47ac993485beb5a19d5dc4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/elastic/elasticsearch-php/zipball/11ebdf2c847d0e2c4a47ac993485beb5a19d5dc4",
+                "reference": "11ebdf2c847d0e2c4a47ac993485beb5a19d5dc4",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/ringphp": "~1.0",
+                "php": ">=5.4",
+                "psr/log": "~1.0"
+            },
+            "require-dev": {
+                "cpliakas/git-wrapper": "~1.0",
+                "mockery/mockery": "0.9.4",
+                "phpunit/phpunit": "~4.7",
+                "sami/sami": "~3.2",
+                "symfony/yaml": "2.4.3 as 2.4.2",
+                "twig/twig": "1.*"
+            },
+            "suggest": {
+                "ext-curl": "*",
+                "monolog/monolog": "Allows for client-level logging and tracing"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Elasticsearch\\": "src/Elasticsearch/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Zachary Tong"
+                }
+            ],
+            "description": "PHP Client for Elasticsearch",
+            "keywords": [
+                "client",
+                "elasticsearch",
+                "search"
+            ],
+            "time": "2016-06-03 21:09:29"
+        },
+        {
             "name": "friendsofsymfony/user-bundle",
             "version": "dev-master",
             "source": {
@@ -973,6 +1027,107 @@
                 "User management"
             ],
             "time": "2016-06-21 10:34:42"
+        },
+        {
+            "name": "guzzlehttp/ringphp",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guzzle/RingPHP.git",
+                "reference": "dbbb91d7f6c191e5e405e900e3102ac7f261bc0b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/guzzle/RingPHP/zipball/dbbb91d7f6c191e5e405e900e3102ac7f261bc0b",
+                "reference": "dbbb91d7f6c191e5e405e900e3102ac7f261bc0b",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/streams": "~3.0",
+                "php": ">=5.4.0",
+                "react/promise": "~2.0"
+            },
+            "require-dev": {
+                "ext-curl": "*",
+                "phpunit/phpunit": "~4.0"
+            },
+            "suggest": {
+                "ext-curl": "Guzzle will use specific adapters if cURL is present"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GuzzleHttp\\Ring\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
+                }
+            ],
+            "description": "Provides a simple API and specification that abstracts away the details of HTTP into a single PHP function.",
+            "time": "2015-05-20 03:37:09"
+        },
+        {
+            "name": "guzzlehttp/streams",
+            "version": "3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guzzle/streams.git",
+                "reference": "47aaa48e27dae43d39fc1cea0ccf0d84ac1a2ba5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/guzzle/streams/zipball/47aaa48e27dae43d39fc1cea0ccf0d84ac1a2ba5",
+                "reference": "47aaa48e27dae43d39fc1cea0ccf0d84ac1a2ba5",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GuzzleHttp\\Stream\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
+                }
+            ],
+            "description": "Provides a simple abstraction over streams of data",
+            "homepage": "http://guzzlephp.org/",
+            "keywords": [
+                "Guzzle",
+                "stream"
+            ],
+            "time": "2014-10-12 19:18:40"
         },
         {
             "name": "incenteev/composer-parameter-handler",
@@ -1265,6 +1420,114 @@
             "time": "2016-05-27 01:59:56"
         },
         {
+            "name": "ongr/elasticsearch-bundle",
+            "version": "v1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ongr-io/ElasticsearchBundle.git",
+                "reference": "b628264af59704c654e067ed6b53e178545f5256"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ongr-io/ElasticsearchBundle/zipball/b628264af59704c654e067ed6b53e178545f5256",
+                "reference": "b628264af59704c654e067ed6b53e178545f5256",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/annotations": "~1.2",
+                "doctrine/cache": "~1.4",
+                "doctrine/inflector": "~1.0",
+                "elasticsearch/elasticsearch": "^2.1.3",
+                "monolog/monolog": "~1.10",
+                "ongr/elasticsearch-dsl": "~2.0",
+                "php": ">=5.5",
+                "symfony/symfony": "~2.7|~3.0"
+            },
+            "require-dev": {
+                "mikey179/vfsstream": "~1.4",
+                "phpunit/phpunit": "~4.4",
+                "satooshi/php-coveralls": "~1.0",
+                "squizlabs/php_codesniffer": "~2.0"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "ONGR\\ElasticsearchBundle\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/",
+                    "/Test/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "ONGR team",
+                    "homepage": "http://www.ongr.io"
+                }
+            ],
+            "description": "Elasticsearch bundle for Symfony.",
+            "homepage": "http://ongr.io",
+            "time": "2016-05-26 07:38:28"
+        },
+        {
+            "name": "ongr/elasticsearch-dsl",
+            "version": "v2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ongr-io/ElasticsearchDSL.git",
+                "reference": "7cd0ab4b2a8b1d7c9f265954ce5d69feb4b19069"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ongr-io/ElasticsearchDSL/zipball/7cd0ab4b2a8b1d7c9f265954ce5d69feb4b19069",
+                "reference": "7cd0ab4b2a8b1d7c9f265954ce5d69feb4b19069",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4",
+                "symfony/options-resolver": "~2.7|~3.0",
+                "symfony/serializer": "~2.7|~3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.4",
+                "satooshi/php-coveralls": "~0.7",
+                "squizlabs/php_codesniffer": "~2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "ONGR\\ElasticsearchDSL\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "ONGR team",
+                    "homepage": "http://www.ongr.io"
+                }
+            ],
+            "description": "Elasticsearch DSL library",
+            "homepage": "http://ongr.io",
+            "time": "2016-05-03 01:24:48"
+        },
+        {
             "name": "paragonie/random_compat",
             "version": "v2.0.2",
             "source": {
@@ -1445,6 +1708,50 @@
                 "psr-3"
             ],
             "time": "2012-12-21 11:40:51"
+        },
+        {
+            "name": "react/promise",
+            "version": "v2.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/reactphp/promise.git",
+                "reference": "8025426794f1944de806618671d4fa476dc7626f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/reactphp/promise/zipball/8025426794f1944de806618671d4fa476dc7626f",
+                "reference": "8025426794f1944de806618671d4fa476dc7626f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "React\\Promise\\": "src/"
+                },
+                "files": [
+                    "src/functions_include.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jan Sorgalla",
+                    "email": "jsorgalla@gmail.com"
+                }
+            ],
+            "description": "A lightweight implementation of CommonJS Promises/A for PHP",
+            "time": "2016-05-03 17:50:52"
         },
         {
             "name": "sensio/distribution-bundle",
