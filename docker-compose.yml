@@ -32,4 +32,9 @@ services:
     ports:
       - "3306:3306"
   redis:
-      image: redis:3
+    image: redis:3
+  elasticsearch:
+    image: elasticsearch:latest
+    ports:
+      - "9200:9200"
+
