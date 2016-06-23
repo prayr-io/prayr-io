@@ -1,0 +1,33 @@
+{% set pixelTresholds = {'hs': 384, 'sm': 768, 'md': 992, 'lg': 1266, 'xl': 1486} %}
+
+{% if not altText is defined %}
+    {% set altText = '' %}
+{% endif %}
+
+{% if not pictureClasses is defined %}
+    {% set pictureClasses = '' %}
+{% endif %}
+
+{% if not imgClasses is defined %}
+    {% set imgClasses = '' %}
+{% endif %}
+
+{% if itemPropImgSize is defined %}
+    <meta itemprop="image" content="{{ asset(sizes[itemPropImgSize].x2, null, true) }}">
+{% endif %}
+<picture class="{{ pictureClasses }}">
+    {% for size, paths in sizes %}
+        {% if size != 'default' %}
+            <!--[if IE 9]><video style="display: none;"><![endif]-->
+            <source srcset="{{ asset(paths.x1) }}, {{ asset(paths.x2) }} 2x"
+                            media="(min-width: {{ pixelTresholds[size] }}px)">
+            <!--[if IE 9]></video><![endif]-->
+        {% endif %}
+    {% endfor %}
+
+    <img src="{{ asset(sizes.default.x1) }}"
+         srcset="{{ asset(sizes.default.x1) }}, {{ asset(sizes.default.x2) }} 2x"
+         alt="{{ altText }}"
+         class="{{ imgClasses }}"
+    >
+</picture>
