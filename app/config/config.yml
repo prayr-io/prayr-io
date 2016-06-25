@@ -83,3 +83,15 @@ fos_user:
     db_driver: orm
     firewall_name: main
     user_class: AppBundle\Entity\User
+
+ongr_elasticsearch:
+    connections:
+        default:
+            hosts:
+              - "%elasticsearch_host%"
+            index_name: prayr
+    managers:
+        default:
+            connection: default
+            mappings:
+                - AppBundle

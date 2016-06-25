@@ -17,5 +17,7 @@ parameters:
 
     redis_host:        redis
 
+    elasticsearch_host: elasticsearch
+
     # A secret key that's used to generate certain security-related tokens
     secret:            ThisTokenIsNotSoSecretChangeIt

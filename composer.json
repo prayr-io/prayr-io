@@ -74,7 +74,8 @@
                 "database_name": "SYMFONY_DATABASE_NAME",
                 "database_user": "SYMFONY_DATABASE_USER",
                 "database_password": "SYMFONY_DATABASE_PASSWORD",
-                "redis_host": "SYMFONY_REDIS_HOST"
+                "redis_host": "SYMFONY_REDIS_HOST",
+                "elasticsearch_host": "SYMFONY_ELASTICSEARCH_HOST"
             }
         }
     }
