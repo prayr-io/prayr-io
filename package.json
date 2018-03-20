@@ -32,7 +32,6 @@
     "picturefill": "~2.2.0",
     "require-dir": "~0.3.0",
     "font-awesome": "~4.6.3",
-    "jquery": "2.2.4",
     "agency": "https://github.com/BlackrockDigital/startbootstrap-agency.git#gh-pages"
   },
   "devDependencies": {},
